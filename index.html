@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Container Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#f4f4f4; margin:0; padding:0; }
+        #controls { padding: 10px; background:white; display:flex; flex-wrap: wrap; gap:10px; align-items:center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        label { margin-right:5px; }
+        canvas { display:block; width:100%; height: calc(100vh - 90px); background:#ddd; }
+        #viewer { width:100%; height:calc(100vh - 90px); }
+        button { padding:6px 12px; }
+    </style>
+</head>
+<body>
+<div id="controls">
+    <label>Type
+        <select id="type">
+            <option value="box">Box</option>
+            <option value="cylinder">Cylinder</option>
+        </select>
+    </label>
+    <label>Width <input id="width" type="number" value="10" step="0.1"> mm</label>
+    <label>Depth <input id="depth" type="number" value="10" step="0.1"> mm</label>
+    <label>Height <input id="height" type="number" value="10" step="0.1"> mm</label>
+    <label>Radius <input id="radius" type="number" value="5" step="0.1"> mm</label>
+    <label>Wall <input id="wall" type="number" value="1.4" step="0.1"> mm</label>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+    <button id="download">Download STL</button>
+</div>
+<div id="viewer"></div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
